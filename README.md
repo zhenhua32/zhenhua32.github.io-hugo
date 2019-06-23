@@ -39,3 +39,7 @@ echo 'theme = "ananke"' >> blog/config.toml
 ```powershell
 .\bin\hugo.exe -s ./blog
 ```
+
+添加子模块
+
+git submodule add -b master git@github.com:zhenhua32/zhenhua32.github.io.git zhenhua32.github.io
