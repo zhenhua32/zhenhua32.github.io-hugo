@@ -1,8 +1,8 @@
-baseURL = "http://example.org/"
+baseURL = ""
 languageCode = "zh-hans"
 title = "tobefan"
 theme = "hugo-theme-learn"
-publishdir = "../public"
+publishDir = "../public"
 
 # For search functionality
 [outputs]

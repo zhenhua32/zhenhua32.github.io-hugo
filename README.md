@@ -15,7 +15,7 @@
 ```powershell
 git submodule add https://github.com/matcornic/hugo-theme-learn.git blog/themes/hugo-theme-learn
 
-echo 'theme = "ananke"' >> blog/config.toml
+echo 'theme = "hugo-theme-learn"' >> blog/config.toml
 ```
 
 手动添加文章
