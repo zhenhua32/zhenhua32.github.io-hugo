@@ -1,7 +1,7 @@
 +++
 title = "安装启动"
 date = 2019-06-22T18:57:32+08:00
-weight = 5
+weight = 1
 +++
 
 ## 快速安装
@@ -45,6 +45,10 @@ echo 'theme = "hugo-theme-learn"' >> blog/config.toml
 ## 添加文章
 
 添加文章的基础命令是 `hugo new`, 但因为涉及到主题相关的内容, 在后面介绍.
+
+```shell
+./bin/hugo new posts/doc.md -s ./blog
+```
 
 ## 启动
 
