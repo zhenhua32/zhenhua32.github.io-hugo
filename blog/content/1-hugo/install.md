@@ -24,7 +24,7 @@ Hugo 虽然是基于 go 语言的项目, 但最懒的方式还是去 [releases](
 
 新建一个站点, 取名为 `blog`, 这个是网站的根目录名称.
 
-```shell
+```bash
 ./bin/hugo new site blog
 ```
 
@@ -32,7 +32,7 @@ Hugo 虽然是基于 go 语言的项目, 但最懒的方式还是去 [releases](
 
 这里我使用的是 [HUGO LEARN THEME](https://learn.netlify.com/en/) 主题.
 
-```shell
+```bash
 git submodule add https://github.com/matcornic/hugo-theme-learn.git blog/themes/hugo-theme-learn
 echo 'theme = "hugo-theme-learn"' >> blog/config.toml
 ```
@@ -46,13 +46,13 @@ echo 'theme = "hugo-theme-learn"' >> blog/config.toml
 
 添加文章的基础命令是 `hugo new`, 但因为涉及到主题相关的内容, 在后面介绍.
 
-```shell
+```bash
 ./bin/hugo new posts/doc.md -s ./blog
 ```
 
 ## 启动
 
-```shell
+```bash
 ./bin/hugo server -D -s ./blog
 ```
 
@@ -66,6 +66,6 @@ publishdir = "../public"
 
 运行命令
 
-```shell
+```bash
 ./bin/hugo -s ./blog
 ```

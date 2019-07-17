@@ -23,7 +23,7 @@ weight = 2
 
 简单介绍下 git submodule 的用法.
 
-```shell
+```bash
 git submodule add https://github.com/matcornic/hugo-theme-learn.git blog/themes/hugo-theme-learn
 ```
 
@@ -42,7 +42,7 @@ content 下的每个目录都是一个章节, 每个章节都有一个 `_index.m
 
 ### 创建章节
 
-```shell
+```bash
 ./bin/hugo new 1-hugo/_index.md --kind chapter -s ./blog
 ```
 
@@ -52,7 +52,7 @@ content 下的每个目录都是一个章节, 每个章节都有一个 `_index.m
 
 ### 创建内容页
 
-```shell
+```bash
 ./bin/hugo new 1-hugo/install.md -s ./blog
 ```
 
