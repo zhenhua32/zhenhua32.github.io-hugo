@@ -90,6 +90,21 @@ kubectl get nodes
 kubectl get pods -n kube-system
 ```
 
+### 加入集群
+
+```bash
+# 运行 master 集群上 kubeadm init 最后的提示
+kubeadm join --token <token> <master-ip>:<master-port> --discovery-token-ca-cert-hash sha256:<hash>
+
+# token 会在 24 小时候过期, 所以需要重新生成
+kubeadm token list
+kubeadm token create
+
+# 获取 --discovery-token-ca-cert-hash
+openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | \
+   openssl dgst -sha256 -hex | sed 's/^.* //'
+```
+
 ### 重置集群
 
 ```bash
