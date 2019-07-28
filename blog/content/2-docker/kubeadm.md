@@ -87,6 +87,7 @@ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl versio
 
 # 验证 node status 为 ready 就行了
 kubectl get nodes
+kubectl get pods -n kube-system
 ```
 
 ### 重置集群
