@@ -67,7 +67,7 @@ networks:
     name: git_net
 ```
 
-简单介绍一下, 上面这个 docker-compose.yml 只有一个叫做 igtlab 的服务,
+简单介绍一下, 上面这个 docker-compose.yml 只有一个叫做 gitlab 的服务,
 要修改的是里面的 **external_url**, 将它修改为自己的 ip 地址加映射的主机端口就行了,
 上面文件中映射到了 3080 端口.
 
