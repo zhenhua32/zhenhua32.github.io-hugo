@@ -1,0 +1,67 @@
+version: "3.7"
+
+services: 
+  gitlab:
+    image: 'gitlab/gitlab-ce:12.1.1-ce.0'
+    restart: "no"
+    hostname: 'gitlab'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://blog.iftodo.com'
+        # nginx['enable'] = false
+        gitlab_rails['gitlab_shell_ssh_port'] = 3022
+        web_server['external_users'] = ['nginx', 'www-data']
+        # gitlab_rails['internal_api_url'] = 'https://blog.iftodo.com'
+        # Add any other gitlab.rb configuration here, each on its own line
+    ports:
+      - '3080:80'
+      # - '3043:443'
+      - '3022:22'
+    volumes:
+      - '/srv/gitlab/data/gitlab-workhorse:/var/opt/gitlab/gitlab-workhorse'
+    #   - '/srv/gitlab/config:/etc/gitlab'
+    #   - '/srv/gitlab/logs:/var/log/gitlab'
+    #   - '/srv/gitlab/data:/var/opt/gitlab'
+    networks: 
+      - git_net
+
+  runner:
+    image: 'gitlab/gitlab-runner:latest'
+    restart: 'no'
+    depends_on:
+      - gitlab
+    volumes: 
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - './gitlab/ruuner:/etc/gitlab-runner'
+    # extra_hosts:
+    #   - 'gitlab:172.25.0.2'
+    networks: 
+      - git_net
+  
+  # run before runner to get config, gitlab must have start
+  runner-config:
+    image: 'gitlab/gitlab-runner:latest'
+    restart: 'no'
+    command: |
+      register
+      --non-interactive
+      --url="http://gitlab"
+      --registration-token="TsBj3wds5uiteVYZUmXF"
+      --executor="docker"
+      --docker-image="alpine:latest"
+      --docker-privileged="true"
+      --docker-pull-policy="if-not-present"
+      --docker-network-mode="git_net"
+      --description="docker-runner"
+      --tag-list="docker"
+      --run-untagged="true"
+      --locked="false"
+      --access-level="not_protected"
+    volumes: 
+      - './gitlab/ruuner:/etc/gitlab-runner'
+    networks: 
+      - git_net
+
+networks: 
+  git_net:
+    name: git_net
