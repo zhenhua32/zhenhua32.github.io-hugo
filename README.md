@@ -24,6 +24,15 @@ echo 'theme = "hugo-theme-learn"' >> blog/config.toml
 .\bin\hugo.exe -s ./blog new posts/hello.md
 ```
 
+基于 hugo-theme-learn 的常见动作
+
+```powershell
+# 创建章节
+./bin/hugo new 1-hugo/_index.md --kind chapter -s ./blog
+# 创建内容页
+./bin/hugo new 1-hugo/install.md -s ./blog
+```
+
 启动服务器
 
 ```powershell
