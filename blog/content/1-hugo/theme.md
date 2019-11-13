@@ -80,8 +80,8 @@ style 是样式, 默认的样式包含 `“orange”, “grey”, “blue” and
 
 当然, 你需要将文件放置在指定的目录中才能被检索到.
 
-- 如果页面是 page.md, 那么目录名为 page.files
-- 如果页面是文件夹, 那么就要建一个子目录 files
+- 如果页面是 page.md, 那么目录名为 `page.files`
+- 如果页面是文件夹, 那么就要建一个子目录 `files`
 
 ### button
 
