@@ -1,5 +1,5 @@
 +++
-title = "5 Learn"
+title = "Learn"
 date = 2019-11-13T12:33:33+08:00
 weight = 5
 chapter = true
