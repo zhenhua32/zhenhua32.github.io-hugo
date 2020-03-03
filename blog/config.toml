@@ -43,6 +43,6 @@ home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]]
 name = "浙ICP备19044307号"
-url = "http://beian.miitbeian.gov.cn"
+url = "http://beian.miit.gov.cn"
 weight = 10
 

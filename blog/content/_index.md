@@ -10,7 +10,7 @@ pre = ""
 
 # 主页
 
-这是我的个人博客, tobefan.
+这是我的个人主页, tobefan.
 
 welcome to the future.
 
@@ -20,4 +20,4 @@ welcome to the future.
 
 
 
-[浙ICP备19044307号](http://beian.miitbeian.gov.cn)
+[浙ICP备19044307号](http://beian.miit.gov.cn)
