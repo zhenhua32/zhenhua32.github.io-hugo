@@ -42,7 +42,7 @@ home = [ "HTML", "RSS", "JSON"]
   themeVariant = "red"
 
 [[menu.shortcuts]]
-name = "浙ICP备19044307号"
+name = "浙ICP备19044307号-1"
 url = "http://beian.miit.gov.cn"
 weight = 10
 
