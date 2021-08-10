@@ -31,6 +31,15 @@ jobs:
     - name: Copy CNAME
       run: cp ./CNAME ./public
     
+    - name: Commit
+      run: |
+        cd ./public
+        git init
+        git config --local user.email "zhenhua32@gmail.com"
+        git config --local user.name "zhenhua32"
+        git add .
+        git commit -m "init"
+    
     - name: GitHub Push
       uses: ad-m/github-push-action@master
       with:
