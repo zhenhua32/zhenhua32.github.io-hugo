@@ -36,7 +36,7 @@ jobs:
         # Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
         github_token: ${{ github.token }}
         # Repository name to push. Default or empty value represents current github repository (${GITHUB_REPOSITORY})
-        repository: zhenhua32/zhenhua32.github.io-hugo.git # optional, default is 
+        repository: zhenhua32/zhenhua32.github.io # optional, default is 
         # Destination branch to push changes
         branch: master # optional, default is master
         # Determines if force push is used
