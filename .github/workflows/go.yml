@@ -34,7 +34,7 @@ jobs:
     - name: GitHub Push
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.GIT_TOKEN }}
+        github_token: ${{ secrets.ACCESS_TOKEN }}
         repository: 'zhenhua32/zhenhua32.github.io'
         branch: master
         force: true
