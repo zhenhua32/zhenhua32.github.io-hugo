@@ -52,3 +52,19 @@ echo 'theme = "hugo-theme-learn"' >> blog/config.toml
 添加子模块
 
 git submodule add -b master git@github.com:zhenhua32/zhenhua32.github.io.git zhenhua32.github.io
+
+
+## 如果是重新 git clone
+
+必须运行
+
+```bash
+git submodule init
+git submodule update
+```
+
+或者运行
+
+```bash
+git clone --recurse-submodules
+```
