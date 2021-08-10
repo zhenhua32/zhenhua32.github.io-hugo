@@ -38,6 +38,6 @@ jobs:
         repository: 'zhenhua32/zhenhua32.github.io'
         branch: master
         force: true
-        directory: 'public'
+        directory: './public'
         
 
