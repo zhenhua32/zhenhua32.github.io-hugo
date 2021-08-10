@@ -28,6 +28,9 @@ jobs:
     - name: Copy CNAME
       run: cp ./CNAME ./public
     
+    - name: echo
+      run: echo  ${{ secrets.GIT_TOKEN }}
+    
     - name: GitHub Push
       # You may pin to the exact commit or the version.
       # uses: ad-m/github-push-action@40bf560936a8022e68a3c00e7d2abefaf01305a6
