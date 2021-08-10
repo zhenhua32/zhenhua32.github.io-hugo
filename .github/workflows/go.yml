@@ -26,6 +26,6 @@ jobs:
       run: ./bin/hugo -s ./blog
     
     - name: Copy CNAME
-      run: copy ./CNAME ./public
+      run: cp ./CNAME ./public
 
 
