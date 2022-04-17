@@ -208,7 +208,7 @@ variable=value
 myvar="hello world"
 ```
 
-读取变量: 在变量名前加上 `%` 字符
+读取变量: 在变量名前加上 `$` 字符
 
 ```bash
 foo=bar
